@@ -10,6 +10,37 @@ var Jugador = {
   alto: 30,
   velocidad: 10,
   vidas: 5,
+
+  perderVidas : function(cantVidas){
+    Jugador.vidas - cantVidas;
+  },
+  
+  movimiento : function(tecla){
+    if (tecla == "izq"){
+      Jugador.x -= 5;
+      Jugador.sprite = "imagenes/auto_rojo_izquierda.png";
+      Jugador.ancho = 30;
+      Jugador.alto = 15;
+    }
+    if (tecla == "der"){
+      Jugador.x += 5;
+      Jugador.sprite = "imagenes/auto_rojo_derecha.png";
+      Jugador.ancho = 30;
+      Jugador.alto = 15;
+    }
+    if (tecla == "arriba"){
+      Jugador.y -= 5;
+      Jugador.sprite = "imagenes/auto_rojo_arriba.png"
+      Jugador.ancho = 15;
+      Jugador.alto = 30;
+    }
+    if (tecla == "abajo"){
+      Jugador.y += 5;
+      Jugador.sprite = "imagenes/auto_rojo_abajo.png"
+      Jugador.ancho = 15;
+      Jugador.alto = 30;
+    } 
+  },
   // Hay que agregar lo que falte al jugador: movimientos, perdida de vidas,
   // y todo lo que haga falta para que cumpla con sus responsabilidades
 
