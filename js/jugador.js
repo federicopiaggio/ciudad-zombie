@@ -12,30 +12,30 @@ var Jugador = {
   vidas: 5,
 
   perderVidas : function(cantVidas){
-    Jugador.vidas - cantVidas;
+    this.vidas -= cantVidas;
   },
   
   movimiento : function(tecla){
     if (tecla == "izq"){
-      Jugador.x -= 5;
+      Jugador.x -= 7;
       Jugador.sprite = "imagenes/auto_rojo_izquierda.png";
       Jugador.ancho = 30;
       Jugador.alto = 15;
     }
     if (tecla == "der"){
-      Jugador.x += 5;
+      Jugador.x += 7;
       Jugador.sprite = "imagenes/auto_rojo_derecha.png";
       Jugador.ancho = 30;
       Jugador.alto = 15;
     }
     if (tecla == "arriba"){
-      Jugador.y -= 5;
+      Jugador.y -= 7;
       Jugador.sprite = "imagenes/auto_rojo_arriba.png"
       Jugador.ancho = 15;
       Jugador.alto = 30;
     }
     if (tecla == "abajo"){
-      Jugador.y += 5;
+      Jugador.y += 7;
       Jugador.sprite = "imagenes/auto_rojo_abajo.png"
       Jugador.ancho = 15;
       Jugador.alto = 30;
